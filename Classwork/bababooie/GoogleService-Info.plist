@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCih5G8uVLv9m1OiWeEGrssTMZPVZ_Ttyw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>680224617329</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>co.za.openwindow.bababooie</string>
+	<key>PROJECT_ID</key>
+	<string>class-work-865db</string>
+	<key>STORAGE_BUCKET</key>
+	<string>class-work-865db.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:680224617329:ios:55e0df9fd327db5f50bcd0</string>
+</dict>
+</plist>

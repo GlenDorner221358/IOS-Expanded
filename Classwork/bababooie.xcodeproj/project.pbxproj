@@ -17,6 +17,11 @@
 		3F284E4F2C5397E1007D1B61 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F284E4C2C5397E1007D1B61 /* LocationView.swift */; };
 		3F284E502C5397E1007D1B61 /* ImageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F284E4D2C5397E1007D1B61 /* ImageSelectionView.swift */; };
 		3F284E512C5397E1007D1B61 /* MotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F284E4E2C5397E1007D1B61 /* MotionView.swift */; };
+		3F3846BE2C5CBD8A0084E99F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F3846BD2C5CBD8A0084E99F /* GoogleService-Info.plist */; };
+		3F3846C32C5CC1C50084E99F /* FirebaseAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3846C22C5CC1C50084E99F /* FirebaseAuthView.swift */; };
+		3F3846C52C5CC1D50084E99F /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3846C42C5CC1D50084E99F /* FirebaseAuthManager.swift */; };
+		3F3846C72C5CCB370084E99F /* BioAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3846C62C5CCB370084E99F /* BioAuthView.swift */; };
+		3F3846C92C5CCB450084E99F /* BioAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3846C82C5CCB450084E99F /* BioAuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		3F284E4C2C5397E1007D1B61 /* LocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		3F284E4D2C5397E1007D1B61 /* ImageSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectionView.swift; sourceTree = "<group>"; };
 		3F284E4E2C5397E1007D1B61 /* MotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionView.swift; sourceTree = "<group>"; };
+		3F3846BD2C5CBD8A0084E99F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F3846C22C5CC1C50084E99F /* FirebaseAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthView.swift; sourceTree = "<group>"; };
+		3F3846C42C5CC1D50084E99F /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		3F3846C62C5CCB370084E99F /* BioAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioAuthView.swift; sourceTree = "<group>"; };
+		3F3846C82C5CCB450084E99F /* BioAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,8 @@
 		3F284E162C5387C9007D1B61 /* bababooie */ = {
 			isa = PBXGroup;
 			children = (
+				3F3846C12C5CC1B00084E99F /* Auth */,
+				3F3846BD2C5CBD8A0084E99F /* GoogleService-Info.plist */,
 				3F284E432C538845007D1B61 /* Health */,
 				3F284E422C538819007D1B61 /* SensorAccess */,
 				3F284E172C5387C9007D1B61 /* bababooieApp.swift */,
@@ -136,6 +148,17 @@
 				3F284E482C538EB3007D1B61 /* HealthStat.swift */,
 			);
 			path = Health;
+			sourceTree = "<group>";
+		};
+		3F3846C12C5CC1B00084E99F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3F3846C22C5CC1C50084E99F /* FirebaseAuthView.swift */,
+				3F3846C42C5CC1D50084E99F /* FirebaseAuthManager.swift */,
+				3F3846C62C5CCB370084E99F /* BioAuthView.swift */,
+				3F3846C82C5CCB450084E99F /* BioAuthManager.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +249,9 @@
 				Base,
 			);
 			mainGroup = 3F284E0B2C5387C9007D1B61;
+			packageReferences = (
+				3F3846BF2C5CBF6F0084E99F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3F284E152C5387C9007D1B61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +270,7 @@
 			files = (
 				3F284E202C5387CB007D1B61 /* Preview Assets.xcassets in Resources */,
 				3F284E1C2C5387CB007D1B61 /* Assets.xcassets in Resources */,
+				3F3846BE2C5CBD8A0084E99F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +297,13 @@
 			files = (
 				3F284E472C53895D007D1B61 /* HealthView.swift in Sources */,
 				3F284E4F2C5397E1007D1B61 /* LocationView.swift in Sources */,
+				3F3846C92C5CCB450084E99F /* BioAuthManager.swift in Sources */,
 				3F284E1A2C5387C9007D1B61 /* ContentView.swift in Sources */,
+				3F3846C32C5CC1C50084E99F /* FirebaseAuthView.swift in Sources */,
+				3F3846C52C5CC1D50084E99F /* FirebaseAuthManager.swift in Sources */,
 				3F284E452C538875007D1B61 /* HealthManager.swift in Sources */,
 				3F284E512C5397E1007D1B61 /* MotionView.swift in Sources */,
+				3F3846C72C5CCB370084E99F /* BioAuthView.swift in Sources */,
 				3F284E502C5397E1007D1B61 /* ImageSelectionView.swift in Sources */,
 				3F284E492C538EB3007D1B61 /* HealthStat.swift in Sources */,
 				3F284E182C5387C9007D1B61 /* bababooieApp.swift in Sources */,
@@ -625,6 +656,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F3846BF2C5CBF6F0084E99F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 3F284E0C2C5387C9007D1B61 /* Project object */;
 }
