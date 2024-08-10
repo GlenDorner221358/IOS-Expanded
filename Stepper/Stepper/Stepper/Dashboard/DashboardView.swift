@@ -5,34 +5,36 @@ struct DashboardView: View {
     @ObservedObject var manager = StepManager()
 
     var body: some View {
+        // Safely unwrap the step count
+        let stepCount = manager.healthStats.first?.amount ?? "0"
         
         VStack{
-        // MAIN STEP TRACKER
+            // MAIN STEP TRACKER
             VStack{
                 Text("STEPS WALKED TODAY")
-                Text(manager.healthstats.amount)
+                Text(stepCount)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
             }
             .padding(20)
             .frame(maxWidth: .infinity)
-            .background(.lightGray)
-            .CornerRadius(10)
+            .background(Color(.lightGray))
+            .cornerRadius(10)
             .foregroundColor(.white)
             .shadow(color: .black.opacity(0.2), radius: 20, x: 2, y: 10)
            
-        // pb tracker STILL HAVE TO IMPLEMENT
+            // pb tracker STILL HAVE TO IMPLEMENT
             Text("Personal Best: 91,275")
-            .frame(maxWidth: .infinity)
-            .background(.lightGray)
-            .CornerRadius(10)
-            .foregroundColor(.white)
-            .shadow(color: .black.opacity(0.2), radius: 20, x: 2, y: 10)
-
+                .frame(maxWidth: .infinity)
+                .background(Color(.lightGray))
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                .shadow(color: .black.opacity(0.2), radius: 20, x: 2, y: 10)
 
             HStack{
-
                 NavigationLink(destination: DetailsView()){
                     Button(action: {
-                    // send user to Steps this week chart
+                    // send user to Steps this month chart
                     }){
                         Text("Steps this month")
                             .padding()
@@ -42,7 +44,6 @@ struct DashboardView: View {
                     .padding()
                 }
                 
-
                 NavigationLink(destination: DetailsView()){
                     Button(action: {
                     // send user to Steps this week chart
@@ -54,11 +55,9 @@ struct DashboardView: View {
                     .buttonStyle(.borderedProminent)
                     .padding()
                 }
-                
             }
-
         }
-
+        .padding()
     }
 }
 
@@ -67,4 +66,3 @@ struct DashboardView_Previews: PreviewProvider {
         DashboardView()
     }
 }
-

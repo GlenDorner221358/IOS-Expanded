@@ -6,7 +6,7 @@ struct SignUpView: View {
 
     var body: some View {
         ZStack {
-            Color(hex: "#DAE1E7")
+            Color("#DAE1E7")
                 .ignoresSafeArea()
 
             VStack(spacing: 20) {

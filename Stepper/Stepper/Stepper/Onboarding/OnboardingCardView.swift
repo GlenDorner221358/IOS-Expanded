@@ -32,7 +32,7 @@ struct OnboardingCardView: View {
         }//END OF VSTACK
         .padding(40)
         .frame(maxWidth: .infinity)
-        .background(.lightGray)
+        .background(Color(.lightGray))
         .cornerRadius(20)
         .foregroundColor(.white)
         .shadow(color: .black.opacity(0.3), radius: 20, x: 2, y: 10)

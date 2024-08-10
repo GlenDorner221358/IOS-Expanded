@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingScreen: View {
+struct OnboardingView: View {
     
     @AppStorage("isOnboarded") var isOnboarded = false
     
@@ -43,13 +43,13 @@ struct OnboardingScreen: View {
 
             }//END Vstack
         }.background(.white)
-        .ignoresSafeArea(All)
+            .ignoresSafeArea(.all)
     }
 }
 
-struct OnboardingScreen_Previews: PreviewProvider {
+struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingScreen()
+        OnboardingView()
     }
 }
 
