@@ -18,7 +18,7 @@ struct OnboardingCardView: View {
                 .resizable()
                 .scaledToFit()
                 .symbolRenderingMode(.palette)
-                .foregroundStyle(.red, .white)
+                .foregroundStyle(.blue)
                 .frame(width: 140, height: 140)
                 .padding()
             Text(title)
@@ -32,9 +32,9 @@ struct OnboardingCardView: View {
         }//END OF VSTACK
         .padding(40)
         .frame(maxWidth: .infinity)
-        .background(Color(.lightGray))
+        .background(Color(.white))
         .cornerRadius(20)
-        .foregroundColor(.white)
+        .foregroundColor(.blue)
         .shadow(color: .black.opacity(0.3), radius: 20, x: 2, y: 10)
     }
 }

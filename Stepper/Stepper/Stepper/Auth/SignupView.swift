@@ -1,19 +1,28 @@
 import SwiftUI
 
-struct SignUpView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
+struct SignupView: View {
+    
+    @State public var name: String = ""
+    @State public var email: String = ""
+    @State public var password: String = ""
 
     var body: some View {
         ZStack {
-            Color("#DAE1E7")
+            Color(.gray)
                 .ignoresSafeArea()
 
             VStack(spacing: 20) {
                 Text("Sign Up")
                     .font(.title)
                     .fontWeight(.semibold)
-                    .padding(.bottom, 30)
+                    .padding()
+                
+                TextField("Name", text: $name)
+                    .padding()
+                    .background(Color(UIColor.systemGray6))
+                    .cornerRadius(10)
+                    .autocapitalization(UITextAutocapitalizationType.words)
+                    .padding()
 
                 TextField("Email", text: $email)
                     .padding()
@@ -21,11 +30,13 @@ struct SignUpView: View {
                     .cornerRadius(10)
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
+                    .padding()
 
                 SecureField("Password", text: $password)
                     .padding()
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(10)
+                    .padding()
 
                 Button(action: {
                     // Handle sign-up 
@@ -38,20 +49,25 @@ struct SignUpView: View {
                         .cornerRadius(10)
                 }
                 .padding(.top, 20)
+                .padding()
 
                 NavigationLink(destination: LoginView()) {
                     Text("Already have an Account? Log In.")
                         .foregroundColor(.blue)
                         .padding(.top, 10)
                 }
+                .padding()
             }
-            .padding()
+            .cornerRadius(20)
+            .background(Color.white)
+            .padding(15)
+            
         }
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct SignupView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignupView()
     }
 }

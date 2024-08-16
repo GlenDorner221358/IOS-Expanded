@@ -16,9 +16,11 @@ struct OnboardingView: View {
         
             VStack{
                 TabView{
-                    OnboardingCardView(title: "Welcome", icon: "ADD WELCOMING SYMBOL HERE", description: "Welcome to stepper. The only fitness app you will ever need...").padding()
+                    OnboardingCardView(title: "Welcome", icon: "door.left.hand.open", description: "Welcome to stepper. The only fitness app you will ever need...").padding()
                     
-                    OnboardingCardView(title: "Walk", icon: "ADD WALKING SYMBOL HERE!", description: "Experience the euphoria of taking a walk... and then tracking it...").padding()
+                    OnboardingCardView(title: "Walk", icon: "figure.walk", description: "We need your permissions to track your steps please...").padding()
+                    
+                    OnboardingCardView(title: "Live", icon: "tree", description: "You also need to sign up to firestore please...for the love of walking...").padding()
                     
                 }
                 .tabViewStyle(.page(indexDisplayMode: .always))
@@ -32,17 +34,20 @@ struct OnboardingView: View {
                             Text("Finish")
                                 .padding()
                                 .bold()
+                                .foregroundColor(Color.blue)
                             Spacer()
                             Image(systemName: "arrow.right.circle.fill")
                                 .padding()
                         }
                     }
-                    .buttonStyle(.borderedProminent)
+                    .background(Color.white)
                     .padding()
+                    
                 }
 
             }//END Vstack
-        }.background(.white)
+        }.background(Color.gray)
+        
             .ignoresSafeArea(.all)
     }
 }

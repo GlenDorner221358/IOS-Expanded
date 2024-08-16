@@ -1,19 +1,19 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @State public var email: String = ""
+    @State public var password: String = ""
 
     var body: some View {
         ZStack {
-            Color("#DAE1E7")
+            Color(.gray)
                 .ignoresSafeArea()
 
             VStack(spacing: 20) {
                 Text("Log In")
                     .font(.title)
                     .fontWeight(.semibold)
-                    .padding(.bottom, 30)
+                    .padding()
 
                 TextField("Email", text: $email)
                     .padding()
@@ -21,38 +21,43 @@ struct LoginView: View {
                     .cornerRadius(10)
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
+                    .padding()
 
                 SecureField("Password", text: $password)
                     .padding()
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(10)
+                    .padding()
 
-                NavigationLink(destination: DashboardView()){
-                    Button(action: {
-                        // Handle login 
-                    }) {
-                        Text("Login")
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    .padding(.top, 20)
+                Button(action: {
+                    // Handle sign-up
+                }) {
+                    Text("Log In")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
+                .padding(.top, 20)
+                .padding()
 
-                NavigationLink(destination: SignUpView()) {
-                    Text("Don't have an Account? Sign up.")
+                NavigationLink(destination: SignupView()) {
+                    Text("Dont have an account? Sign up")
                         .foregroundColor(.blue)
                         .padding(.top, 10)
                 }
+                .padding()
             }
-            .padding()
+            .cornerRadius(20)
+            .background(Color.white)
+            .padding(15)
+            
         }
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct Login_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }
