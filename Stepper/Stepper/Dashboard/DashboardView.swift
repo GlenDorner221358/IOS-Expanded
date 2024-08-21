@@ -5,8 +5,9 @@ struct DashboardView: View {
     @ObservedObject var manager = StepManager()
 
     var body: some View {
-        // Safely unwrap the step count
         let stepCount = manager.healthStats.first?.amount ?? "0"
+        let PersonalBest = manager.healthStatsPb.first?.amount ?? "0"
+
         
         VStack{
             // MAIN STEP TRACKER
@@ -23,16 +24,19 @@ struct DashboardView: View {
             .foregroundColor(.white)
             .shadow(color: .black.opacity(0.2), radius: 20, x: 2, y: 10)
            
-            // pb tracker STILL HAVE TO IMPLEMENT
-            Text("Personal Best: 91,275")
-                .frame(maxWidth: .infinity)
-                .background(Color(.lightGray))
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                .shadow(color: .black.opacity(0.2), radius: 20, x: 2, y: 10)
+            // PB TRACKER
+            Vstack{
+                Text("Personal Best")
+                Text(PersonalBest)
+            }
+            .frame(maxWidth: .infinity)
+            .background(Color(.lightGray))
+            .cornerRadius(10)
+            .foregroundColor(.white)
+            .shadow(color: .black.opacity(0.2), radius: 20, x: 2, y: 10)
 
             HStack{
-                NavigationLink(destination: DetailsView()){
+                NavigationLink(destination: MonthlyDetailsView()){
                     Button(action: {
                     // send user to Steps this month chart
                     }){
@@ -44,7 +48,7 @@ struct DashboardView: View {
                     .padding()
                 }
                 
-                NavigationLink(destination: DetailsView()){
+                NavigationLink(destination: WeeklyDetailsView()){
                     Button(action: {
                     // send user to Steps this week chart
                     }){
@@ -58,6 +62,9 @@ struct DashboardView: View {
             }
         }
         .padding()
+        .onAppear {
+            manager.getStepCountForToday()
+        }
     }
 }
 

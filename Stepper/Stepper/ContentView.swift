@@ -10,12 +10,18 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("isOnboarded") private var isOnboarded = false
 
+    @ObservedObject var firebaseAuthManager = FirebaseAuthManager()
+
     var body: some View {
         if isOnboarded {
-            LoginView()
+            if firebaseAuthManager.isLoggedIn {
+                DashboardView()
+            } else {
+                LoginView()
+            }
         } else {
             OnboardingView()
-        }
+        }  
     }
 }
 
