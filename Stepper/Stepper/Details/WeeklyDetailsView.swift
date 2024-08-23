@@ -28,7 +28,6 @@ struct WeeklyDetailsView: View {
                         )
                     }
                 }
-                .chartStyle(BarChartStyle())
                 .padding()
             }
         }//END OF VSTACK

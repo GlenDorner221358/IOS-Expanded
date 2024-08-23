@@ -28,7 +28,6 @@ struct MonthlyDetailsView: View {
                         )
                     }
                 }
-                .chartStyle(BarChartStyle())
                 .padding()
             }
         }//END OF VSTACK

@@ -1,5 +1,8 @@
 import Foundation
 import HealthKit
+import Foundation
+import FirebaseAuth
+import FirebaseFirestore
 
 class StepManager: ObservableObject {
     

@@ -26,6 +26,17 @@
 		3F6D7E2E2C67736C0044F955 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3F6D7E2D2C67736C0044F955 /* FirebaseAppDistribution-Beta */; };
 		3F6D7E312C677B0B0044F955 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D7E302C677B0B0044F955 /* Preview Assets.xcassets */; };
 		3F6D7E332C677B7D0044F955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D7E322C677B7D0044F955 /* Assets.xcassets */; };
+		3F6F125C2C786BCC00A7260D /* MonthlyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F125A2C786BCB00A7260D /* MonthlyDetailsView.swift */; };
+		3F6F125D2C786BCC00A7260D /* WeeklyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F125B2C786BCC00A7260D /* WeeklyDetailsView.swift */; };
+		3F6F125F2C786BDB00A7260D /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F125E2C786BDA00A7260D /* FirebaseAuthManager.swift */; };
+		3F6F12672C787EA800A7260D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6F12662C787EA800A7260D /* WidgetKit.framework */; };
+		3F6F12692C787EA800A7260D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6F12682C787EA800A7260D /* SwiftUI.framework */; };
+		3F6F126C2C787EA800A7260D /* StepperWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F126B2C787EA800A7260D /* StepperWidgetBundle.swift */; };
+		3F6F126E2C787EA800A7260D /* StepperWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F126D2C787EA800A7260D /* StepperWidgetLiveActivity.swift */; };
+		3F6F12702C787EA800A7260D /* StepperWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F126F2C787EA800A7260D /* StepperWidget.swift */; };
+		3F6F12722C787EA800A7260D /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F12712C787EA800A7260D /* AppIntent.swift */; };
+		3F6F12742C787EAA00A7260D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F12732C787EAA00A7260D /* Assets.xcassets */; };
+		3F6F12782C787EAA00A7260D /* StepperWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3F6F12642C787EA800A7260D /* StepperWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3FBF94772C6F448A003164D3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3FBF94762C6F448A003164D3 /* FirebaseAnalytics */; };
 		3FBF94792C6F448A003164D3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 3FBF94782C6F448A003164D3 /* FirebaseAnalyticsOnDeviceConversion */; };
 		3FBF947B2C6F448A003164D3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 3FBF947A2C6F448A003164D3 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -49,8 +60,31 @@
 		3FBF949F2C6F448A003164D3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3FBF949E2C6F448A003164D3 /* FirebaseStorage */; };
 		3FBF94A12C6F448A003164D3 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3FBF94A02C6F448A003164D3 /* FirebaseStorageCombine-Community */; };
 		3FBF94A32C6F448A003164D3 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 3FBF94A22C6F448A003164D3 /* FirebaseVertexAI-Preview */; };
-		3FD706052C6F433E00110CF5 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD706042C6F433E00110CF5 /* FirebaseAuthManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F6F12762C787EAA00A7260D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F284E532C53998B007D1B61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F6F12632C787EA800A7260D;
+			remoteInfo = StepperWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F6F127C2C787EAA00A7260D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3F6F12782C787EAA00A7260D /* StepperWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F284E5B2C53998B007D1B61 /* Stepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +103,18 @@
 		3F6D7E172C6772060044F955 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		3F6D7E302C677B0B0044F955 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F6D7E322C677B7D0044F955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3FD706042C6F433E00110CF5 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseAuthManager.swift; path = ../../../../../../FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		3F6F125A2C786BCB00A7260D /* MonthlyDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyDetailsView.swift; sourceTree = "<group>"; };
+		3F6F125B2C786BCC00A7260D /* WeeklyDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyDetailsView.swift; sourceTree = "<group>"; };
+		3F6F125E2C786BDA00A7260D /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		3F6F12642C787EA800A7260D /* StepperWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StepperWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F6F12662C787EA800A7260D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3F6F12682C787EA800A7260D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3F6F126B2C787EA800A7260D /* StepperWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperWidgetBundle.swift; sourceTree = "<group>"; };
+		3F6F126D2C787EA800A7260D /* StepperWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		3F6F126F2C787EA800A7260D /* StepperWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperWidget.swift; sourceTree = "<group>"; };
+		3F6F12712C787EA800A7260D /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		3F6F12732C787EAA00A7260D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F6F12752C787EAA00A7260D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +153,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3F6F12612C787EA800A7260D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6F12692C787EA800A7260D /* SwiftUI.framework in Frameworks */,
+				3F6F12672C787EA800A7260D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				3F284E5D2C53998B007D1B61 /* Stepper */,
+				3F6F126A2C787EA800A7260D /* StepperWidget */,
+				3F6F12652C787EA800A7260D /* Frameworks */,
 				3F284E5C2C53998B007D1B61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				3F284E5B2C53998B007D1B61 /* Stepper.app */,
+				3F6F12642C787EA800A7260D /* StepperWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				3F6D7E072C6772060044F955 /* DetailsView.swift */,
+				3F6F125A2C786BCB00A7260D /* MonthlyDetailsView.swift */,
+				3F6F125B2C786BCC00A7260D /* WeeklyDetailsView.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -159,7 +218,7 @@
 			children = (
 				3F6D7E092C6772060044F955 /* LoginView.swift */,
 				3F6D7E0A2C6772060044F955 /* SignupView.swift */,
-				3FD706042C6F433E00110CF5 /* FirebaseAuthManager.swift */,
+				3F6F125E2C786BDA00A7260D /* FirebaseAuthManager.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -207,6 +266,28 @@
 			path = "Preview Content/Preview Content";
 			sourceTree = "<group>";
 		};
+		3F6F12652C787EA800A7260D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F6F12662C787EA800A7260D /* WidgetKit.framework */,
+				3F6F12682C787EA800A7260D /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F6F126A2C787EA800A7260D /* StepperWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3F6F126B2C787EA800A7260D /* StepperWidgetBundle.swift */,
+				3F6F126D2C787EA800A7260D /* StepperWidgetLiveActivity.swift */,
+				3F6F126F2C787EA800A7260D /* StepperWidget.swift */,
+				3F6F12712C787EA800A7260D /* AppIntent.swift */,
+				3F6F12732C787EAA00A7260D /* Assets.xcassets */,
+				3F6F12752C787EAA00A7260D /* Info.plist */,
+			);
+			path = StepperWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,10 +298,12 @@
 				3F284E572C53998B007D1B61 /* Sources */,
 				3F284E582C53998B007D1B61 /* Frameworks */,
 				3F284E592C53998B007D1B61 /* Resources */,
+				3F6F127C2C787EAA00A7260D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3F6F12772C787EAA00A7260D /* PBXTargetDependency */,
 			);
 			name = Stepper;
 			packageProductDependencies = (
@@ -257,6 +340,23 @@
 			productReference = 3F284E5B2C53998B007D1B61 /* Stepper.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3F6F12632C787EA800A7260D /* StepperWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F6F12792C787EAA00A7260D /* Build configuration list for PBXNativeTarget "StepperWidgetExtension" */;
+			buildPhases = (
+				3F6F12602C787EA800A7260D /* Sources */,
+				3F6F12612C787EA800A7260D /* Frameworks */,
+				3F6F12622C787EA800A7260D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StepperWidgetExtension;
+			productName = StepperWidgetExtension;
+			productReference = 3F6F12642C787EA800A7260D /* StepperWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,6 +368,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					3F284E5A2C53998B007D1B61 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					3F6F12632C787EA800A7260D = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -289,6 +392,7 @@
 			projectRoot = "";
 			targets = (
 				3F284E5A2C53998B007D1B61 /* Stepper */,
+				3F6F12632C787EA800A7260D /* StepperWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -301,6 +405,14 @@
 				3F6D7E312C677B0B0044F955 /* Preview Assets.xcassets in Resources */,
 				3F6D7E332C677B7D0044F955 /* Assets.xcassets in Resources */,
 				3F6D7E182C6772060044F955 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F6F12622C787EA800A7260D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6F12742C787EAA00A7260D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,16 +429,37 @@
 				3F284E5F2C53998B007D1B61 /* StepperApp.swift in Sources */,
 				3F6D7E1F2C6772060044F955 /* StepManager.swift in Sources */,
 				3F6D7E1A2C6772060044F955 /* LoginView.swift in Sources */,
-				3FD706052C6F433E00110CF5 /* FirebaseAuthManager.swift in Sources */,
 				3F6D7E232C6772060044F955 /* DashboardView.swift in Sources */,
 				3F6D7E1C2C6772060044F955 /* OnboardingView.swift in Sources */,
+				3F6F125F2C786BDB00A7260D /* FirebaseAuthManager.swift in Sources */,
 				3F6D7E192C6772060044F955 /* DetailsView.swift in Sources */,
 				3F6D7E1B2C6772060044F955 /* SignupView.swift in Sources */,
+				3F6F125C2C786BCC00A7260D /* MonthlyDetailsView.swift in Sources */,
+				3F6F125D2C786BCC00A7260D /* WeeklyDetailsView.swift in Sources */,
 				3F6D7E202C6772060044F955 /* StepStat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3F6F12602C787EA800A7260D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6F12702C787EA800A7260D /* StepperWidget.swift in Sources */,
+				3F6F12722C787EA800A7260D /* AppIntent.swift in Sources */,
+				3F6F126E2C787EA800A7260D /* StepperWidgetLiveActivity.swift in Sources */,
+				3F6F126C2C787EA800A7260D /* StepperWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F6F12772C787EAA00A7260D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F6F12632C787EA800A7260D /* StepperWidgetExtension */;
+			targetProxy = 3F6F12762C787EAA00A7260D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3F284E682C53998D007D1B61 /* Debug */ = {
@@ -446,12 +579,14 @@
 		3F284E6B2C53998D007D1B61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Stepper/Stepper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Stepper/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -482,12 +617,14 @@
 		3F284E6C2C53998D007D1B61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Stepper/Stepper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Stepper/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -515,6 +652,65 @@
 			};
 			name = Release;
 		};
+		3F6F127A2C787EAA00A7260D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StepperWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StepperWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.openwindow.Stepper.StepperWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F6F127B2C787EAA00A7260D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StepperWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StepperWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.openwindow.Stepper.StepperWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -532,6 +728,15 @@
 			buildConfigurations = (
 				3F284E6B2C53998D007D1B61 /* Debug */,
 				3F284E6C2C53998D007D1B61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F6F12792C787EAA00A7260D /* Build configuration list for PBXNativeTarget "StepperWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F6F127A2C787EAA00A7260D /* Debug */,
+				3F6F127B2C787EAA00A7260D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
