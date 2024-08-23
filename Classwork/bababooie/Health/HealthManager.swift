@@ -7,6 +7,7 @@
 
 import Foundation
 import HealthKit
+import WidgetKit
 
 class HealthManager : ObservableObject {
     
@@ -64,6 +65,8 @@ class HealthManager : ObservableObject {
             //the actual step count
             let stepCountValue = quantity.doubleValue(for: .count())
             
+            self.updateWidget(newSteps: stepCountValue)
+            
             DispatchQueue.main.async {
                 self.healthStats.append(
                     HealthStat(
@@ -80,5 +83,16 @@ class HealthManager : ObservableObject {
         healthStore.execute(query)
         
     }
+
+    
+    func updateWidget(newSteps: Double)
+    {
+        let defaults = UserDefaults(suitName: "group.co.za.openwindow.bababooie")
+        defaults?.set(newSteps, forKey: "totalSteps")
+        //trigger a refresh
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+    
+    
     
 }

@@ -14,7 +14,6 @@ class BioAuthManager: ObservableObject {
     private var canEvaluatePolicy = false
     
     @Published var biometricType: LABiometryType = .none
-    @Published var 
     
     init() {
         getBiometricType()
