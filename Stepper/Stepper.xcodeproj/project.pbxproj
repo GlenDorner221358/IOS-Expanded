@@ -115,6 +115,8 @@
 		3F6F12712C787EA800A7260D /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		3F6F12732C787EAA00A7260D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F6F12752C787EAA00A7260D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC26FC7D2C81AE0700E066A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CC26FC7E2C81C06A00E066A8 /* StepperWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepperWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		3F284E522C53998B007D1B61 = {
 			isa = PBXGroup;
 			children = (
+				CC26FC7E2C81C06A00E066A8 /* StepperWidgetExtension.entitlements */,
 				3F284E5D2C53998B007D1B61 /* Stepper */,
 				3F6F126A2C787EA800A7260D /* StepperWidget */,
 				3F6F12652C787EA800A7260D /* Frameworks */,
@@ -187,6 +190,7 @@
 		3F284E5D2C53998B007D1B61 /* Stepper */ = {
 			isa = PBXGroup;
 			children = (
+				CC26FC7D2C81AE0700E066A8 /* Info.plist */,
 				3F284E5E2C53998B007D1B61 /* StepperApp.swift */,
 				3F284E602C53998B007D1B61 /* ContentView.swift */,
 				3F6D7E082C6772060044F955 /* Auth */,
@@ -589,6 +593,8 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stepper/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need to access your stepcount to, ya know, count your steps";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -627,6 +633,8 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stepper/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need to access your stepcount to, ya know, count your steps";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -657,6 +665,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StepperWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -686,6 +695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StepperWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";

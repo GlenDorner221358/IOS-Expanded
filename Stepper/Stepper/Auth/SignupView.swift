@@ -3,6 +3,7 @@ import SwiftUI
 struct SignupView: View {
     
     @State public var name: String = ""
+    
     @ObservedObject var firebaseAuthManager = FirebaseAuthManager()
     
     var body: some View {
@@ -16,7 +17,7 @@ struct SignupView: View {
                     .fontWeight(.semibold)
                     .padding()
                 
-                TextField("Name", text: $name)
+                TextField("Name", text: $firebaseAuthManager.name)
                     .padding()
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(10)
@@ -38,7 +39,7 @@ struct SignupView: View {
                     .padding()
 
                 Button(action: {
-                    // Handle sign-up 
+                    firebaseAuthManager.signup()
                 }) {
                     Text("Sign Up")
                         .frame(maxWidth: .infinity)

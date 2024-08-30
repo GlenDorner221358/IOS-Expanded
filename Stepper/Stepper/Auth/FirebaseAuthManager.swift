@@ -10,6 +10,8 @@ class FirebaseAuthManager: ObservableObject {
     @Published var isLoggedIn = false
     @Published var errorMessage = ""
     
+    @Published var name = ""
+    
     func login() {
         self.errorMessage = ""
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -53,7 +55,7 @@ class FirebaseAuthManager: ObservableObject {
                 // Create the new user document in Firestore
                 db.collection("users").document(userId).setData([
                     "email": self.email,
-                    "name": "", // Add other fields as necessary
+                    "name": self.name, //call the name from the signup view here
                 ]) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
@@ -83,6 +85,15 @@ class FirebaseAuthManager: ObservableObject {
                     }
                 }
             }
+        }
+    }
+    
+    func signOut () {
+        var firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch {
+            print("User Logged Out")
         }
     }
 

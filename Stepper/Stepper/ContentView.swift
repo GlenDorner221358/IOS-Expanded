@@ -6,19 +6,33 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
+    
     @AppStorage("isOnboarded") private var isOnboarded = false
 
     @ObservedObject var firebaseAuthManager = FirebaseAuthManager()
+    
+    @State public var isLoggedIn: Bool = false
 
     var body: some View {
         if isOnboarded {
-            if firebaseAuthManager.isLoggedIn {
-                DashboardView()
-            } else {
-                LoginView()
-            }
+            
+                ZStack {
+                    if self.isLoggedIn {
+                        DashboardView()
+                    } else {
+                        LoginView()
+                    }
+                }.onAppear{
+                    var handle = Auth.auth().addStateDidChangeListener{auth, user in if user != nil {
+                            self.isLoggedIn = true
+                    } else {
+                        self.isLoggedIn = false
+                    }}
+                }
+                
         } else {
             OnboardingView()
         }  

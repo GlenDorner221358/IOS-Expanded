@@ -166,15 +166,16 @@ class StepManager: ObservableObject {
         
         db.collection("users").document(userId).collection("history").document("personalBest").getDocument { (document, error) in
             if let document = document, document.exists {
-                if let Pb = document.data()?["Pb"] as? Double {
+                if let Pb = document.data()?["Pb"] as? Int {
                     DispatchQueue.main.async {
                         self.healthStatsPb.append(
                             HealthStat(
                                 title: "Personal Best: ",
-                                amount: "\(Pb.rounded(.towardZero))"
+                                amount: "\(Pb)"
                             )
                         )
                     }
+                   
                 } else {
                     print("Personal best data is not available.")
                 }

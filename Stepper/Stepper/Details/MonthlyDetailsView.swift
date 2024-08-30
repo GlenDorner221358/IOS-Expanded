@@ -6,19 +6,9 @@ struct MonthlyDetailsView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                
-                NavigationLink(destination: DashboardView()) {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(.title2)
-                }
-            }
-            
-            Spacer()
             
             if manager.healthStatsMonthly.isEmpty {
-                Text("Loading data...")
+                Text("Error obtaining Monthly steps")
             } else {
                 Chart {
                     ForEach(manager.healthStatsMonthly, id: \.title) { stat in
@@ -32,7 +22,9 @@ struct MonthlyDetailsView: View {
                     AxisMarks(values: .stride(by: 1)) { value in
                         AxisGridLine()
                         AxisTick()
-                        AxisValueLabel(format: .number)
+                        AxisValueLabel {
+                            Text("\(value.as(Int.self) ?? 0)")
+                        }
                     }
                 }
                 .padding()
